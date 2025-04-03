@@ -10,11 +10,11 @@ running = False
 run = True
 Sprinting = False
 while run:
-    
-    if event.type == pygame.MOUSEBUTTONDOWN:
-        print("Click")
-    elif event.type == pygame.MOUSEBUTTONUP:
-           print("release")
+    for event in pygame.event.get():    
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            print("Click")
+        elif event.type == pygame.MOUSEBUTTONUP:
+            print("release")
     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
