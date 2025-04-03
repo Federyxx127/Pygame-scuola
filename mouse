@@ -22,7 +22,7 @@ while run:
    
 pygame.quit()
 
-
+'''
 nelle situazioni in cui serve un solo click mousebuttonup può essere omesso
 
 in caso volessi utilizzare il click del mouse per cambiare una variabile, dovrò inserire una variabile " click = False " 
@@ -37,6 +37,6 @@ click = false
 
 
 
-
+'''
 
 
