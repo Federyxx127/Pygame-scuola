@@ -34,9 +34,9 @@ click = false
         elif event.type == pygame.MOUSEBUTTONUP:
             click = False
     
-
-
-
+per avere le cordinate del mouse si usa la funzione:
+pos = pygame.mouse.get.pos()
+    print(pos)
 '''
 
 
