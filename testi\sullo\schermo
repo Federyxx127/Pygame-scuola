@@ -1,0 +1,16 @@
+#per prima cosa definiamo un font
+
+text_font = pygame.SysFont("Arial", 30) #si possono specificare caratteristiche come "bold" (grassetto) e "Italic" ( corsivo) semplicemente inserendoli come Bold = True e Italic = True dopo la grandezza (in questo caso 30)
+#dopodichè, al di fuori del ciclo definiamo il testo tramite una funzione 
+
+def draw_text(text, font, text_col, x, y) #definita il nome della funzione, si definisce ciò di cui ha bisogno
+  img = font.render(text, True, text_col) #non esistendo una funzione per far comparire un testo, ma solo un immagine, va creata la variabile (img) che è un immagine che ha al suo interno il testo stesso( che verrà esplicitato nel richiamo della funzione), la booleana True
+  #( indica che il font da usare è quello definito prima) ed il colore del testo( anch'esso da dichiarare quando viene chiamata la verisone)
+  screen.blit(img, (x, y)) #blit mostra l'immagine sullo schermo e ne dichiara le coordinate
+
+# nel ciclo di while va chiamata la funzione
+
+draw_text("hello world" text_font, (0,0,0), 220, 150) #il colore ha tre valori perchè va indicato con la scala rgb
+  
+
+
