@@ -1,1 +1,8 @@
+if event.type == pygame.MOUSEBUTTONDOWN:
+    print("Click")
+if event.type == pygame.MOUSEBUTTONUP:
+    print("release")
+
+per il click del mouse con event handler
+mentre con get pressed è:
 
