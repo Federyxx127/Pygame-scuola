@@ -25,6 +25,18 @@ pygame.quit()
 
 nelle situazioni in cui serve un solo click mousebuttonup può essere omesso
 
+in caso volessi utilizzare il click del mouse per cambiare una variabile, dovrò inserire una variabile " click = False " 
+al di fuori del ciclo di while e cambiare il suo stato in "True" o "False" in bottondown e bottonup 
+EX:
+click = false
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            click = True
+        elif event.type == pygame.MOUSEBUTTONUP:
+            click = False
+    
+
+
+
 
 
 
