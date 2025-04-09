@@ -9,3 +9,49 @@ pygame.draw.rect(screen, (255, 0, 0,), (200, 100, 150, 150))
 # un altro argomento può essere il radius ( border_raidus = valore ) che definisce il radius della figura, di base è o ovvero appuntito, può cambiare da lato a lato:
 
 pygame.draw.rect(screen, (255, 0, 0,), (200, 100, 150, 150) width = 5, border_bottom_left_radius = 25, border_top_right_radius = 25)
+
+#funziona in maniera similare per il cerchio:
+pygame.draw.circle(screen, (0, 0, 0), (300, 200), 75) #l'ultimo valore è il raggio
+# per fare un esmpio di mini grafica del simbolo del nucleare si può fare così:
+pygame.draw.circle(screen, (0, 0, 0), (300, 200), 75)
+pygame.draw.circle(screen, (255, 255, 0), (300, 200), 75,  draw_top_right = True, draw_bottom_left = True) # in questo modo abbiamo sovrapposto un cerchi di stesse dimenzioni, ma colorandone solo dei segmenti
+
+#per fare un arco:
+pygame.draw.arc(screen, (74, 158, 199), (200, 100, 150, 150) 0, 3,14)
+                                                       #angolo inziale e 3,14 indica 180 gradi
+
+#per fare un arco o cerchio dinamico( che si crea e cancella lentamente): 
+x = 0 #al di fuori del ciclo di while
+#all'interno del ciclo:
+if pygame.mouse.get_pressed()[o] == True: # lo 0 indica il click del mouse, quando vene premuto il mouse tasto destro aumenta il valore di x
+  x+ = 0.001 
+elif pygame.mouse.get_pressed()[2] == True: # 2 indica il rilascio del mouse, quando viene premuto il tasto sinistro
+  x- = 0.001
+pygame.draw.arc(screen, (74, 158, 199), (200, 100, 150, 150) 0, x)
+# l'arco sarà dinamico
+
+# per fare una linea
+pygame.draw.line(screen, (255, 0, 255), (300, 200), (450, 100))
+#per fare una linea che segue la posizione del mosue si deve impostare una variabile che sia la posizione finale, indicare come posizione finale quella stessa variabile:
+
+pos = pygame.mouse.get_pos()
+pygame.draw.line(screen, (255, 0, 255), (300, 200), pos)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
