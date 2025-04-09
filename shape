@@ -1,0 +1,11 @@
+diplay.set.set_caption("nome finestra")
+#per cambiare il nome della finestra
+
+
+
+pygame.draw.rect(screen, (255, 0, 0,), (200, 100, 150, 150))
+#si scrive prima la figura che vogliamo disegnare, (rect) poi nella parentesi il primo argomento è dove vogliamo disegnarlo (screen), dopodichè il colore ( 3 valori rgb) e nell'ultima parentesi i primi due valori sono le coordinate (200, 100) e poi le dimensioni (150, 150)
+#argomenti in più possono essere "width" ( width = valore ) per i contorni della figura, se non viene inserito il valore base sarà 0, ovvero pieno 
+# un altro argomento può essere il radius ( border_raidus = valore ) che definisce il radius della figura, di base è o ovvero appuntito, può cambiare da lato a lato:
+
+pygame.draw.rect(screen, (255, 0, 0,), (200, 100, 150, 150) width = 5, border_bottom_left_radius = 25, border_top_right_radius = 25)
