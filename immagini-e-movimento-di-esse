@@ -1,0 +1,31 @@
+#per impostare un frame rate bisogna dichiarare:
+clock = pygame.time.Clock()
+clock.tick(60)
+# per creare una sorta di hitbox ad un png bisognerà inserirlo all'interno di un rettangolo, prima però il png dell'immagine dovrà esseere caricato nella stessa cartella dello script, se la cartella è desktop, andrà caricato nel desktop
+soldier = pygame.image.load("soldier.png").covert_alpha() #impostiamo soldier come variabile la carichiamo con image.load tra parentesi mettiamo il nome del file, infine con convert_alpha() rendiamo i quadrati del png invisibili, così sarà utile per renderlo una maschera
+rect_2 = soldier.get_rect() # in questo modo lo rendiamo un rettangolo
+pygame.draw.rect(screen, (255, 0, 250), rect_2) # questo disegnerà non il soldato, ma un quadrato delle sue dimensioni, mentre per mostrare il soldato servirà 
+screen.blit(soldier, (0,0)) # blit richiede cosa mostrare (soldier) e le cordinate, prima di blit bisognerà scrivere dove mostrarlo 
+
+
+
+rect_2.topleft = (2oo, 200) #così si darà una poszione all'angolo in alto a sinistra del rettangolo (non del soldato, ma del rettangolo con le sue dimensioni), dando così una poszione al rettangolo tutto
+screen.blit(soldier, rect_2) #in questo modo il soldato sarà sempre all'interno del rettangolo
+#per muoverlo useremo il key input visto nelle altre repositories
+key = pygame.key.get_pressed()
+
+if key[pygame.K_a]  == True:   #il doppio più controlla lo status
+  rect_2.x -= 5                #così si muoverà sull'asse delle x di -5 pixel
+if key[pygame.K_d]  == True:
+  rect_2.x += 5                #così si muoverà sull'asse delle x di 5 pixel
+if key[pygame.K_s]  == True:
+  rect_2.y += 5                #così si muoverà sull'asse delle y di -5 pixel
+if key[pygame.K_w]  == True:
+  rect_2.y -= 5                #così si muoverà sull'asse delle y di 5 pixel
+
+#per non mostrare il rettangolo basterà non usare "pyagame.draw.rect"
+
+
+ 
+
+ 
