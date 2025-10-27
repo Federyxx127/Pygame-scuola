@@ -1,0 +1,10 @@
+numero1 = float(input("give me 1 number"))              si imposta la variabile, dando l'input(chiedendo un numero, ma floattandolo, ovvero rendendolo un numero)
+numero2 = float(input("another one"))
+print("Somma ", numero2 + numero1)
+print("sottrazione ", numero2 - numero1)
+print("moltiplicazione ", numero2 * numero1)
+print("divisione ", numero2/numero1)
+
+
+
+
