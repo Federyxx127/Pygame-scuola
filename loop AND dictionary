@@ -1,0 +1,27 @@
+for i in range():  #nella parentesi possiamo mettere sia numeri sia variabili che range, i è una variabile, ovvero ciò che viene stampato, range va messo quando voglio stampare in un range
+  print(3)
+
+for i in range(0,10,2): #stampa i numeri da 0 a 10 a salti di due
+  print(i)
+
+fruits = ("apple", "mango", "cherry")
+for i in fruits:
+  print(i)        #stamperà i frutti perchè la variabile i li comprende
+
+for i in "string":   #printa ogni lettera della parola
+  print(i)
+
+
+fruits = ("apple", "mango", "cherry") #len è la funzione che associa un elemento della lista
+print i in range(len(fruits)):
+  print(i, fruits, [i])
+
+
+#printerà "apple 0", "mango 1" etc etc
+
+DICTIONARY
+Students = {"name": "Federico", age: 16}        # associa a un nome un valore
+print(Students ["name"])                        # mettendo dopo Srudents ".get" possiamo isnerire anche una richiesta a dati che non abbiamo, ma dopo ".get" la parentesi dovrà essere tonda in quanto ".get" è una funzione
+
+
+
