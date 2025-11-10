@@ -20,8 +20,24 @@ print i in range(len(fruits)):
 #printerà "apple 0", "mango 1" etc etc
 
 DICTIONARY
-Students = {"name": "Federico", age: 16}        # associa a un nome un valore
+Students = {"name": "Federico", age: 16}        # associa a un nome un valore, i 2 indicano il valore
 print(Students ["name"])                        # mettendo dopo Srudents ".get" possiamo isnerire anche una richiesta a dati che non abbiamo, ma dopo ".get" la parentesi dovrà essere tonda in quanto ".get" è una funzione
 
+
+
+#si può modificare un dictionary tramite queste funzioni:
+students.update({"grade" : "A"}) per aggiungere cose
+atudents.pop("grade")
+students.cleat()
+
+
+
+Students = {"name": "Federico", "class": "3E"}
+print(len(Students))
+print(Students.keys())
+print(Students.items())
+print(Students.update({"grade": "A"}))
+Students.pop("class")
+print(Students.get("class"))  #riassunto
 
 
