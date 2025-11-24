@@ -41,30 +41,9 @@ Students.pop("class")
 print(Students.get("class"))  #riassunto
 
 
-def test():                   #def serve a definire una funzione che, ovviamente, per funzionare deve essere richiamata, return pone fine alla definizione
-    print("before return")    
-    return
-    
-test()
-
-def greet():                             # così verrà richiamata definita la funzione che chiederà un input e lo stamperà
-    name = input("what's your name?")
-    print("hello " + name)
-
-greet()
 
 
 
-
-
-
-def se():
-    a = int(input("e a number"))
-    b= int(input("r one"))
-    c= a+b7
-    print(c)
-
-se()
 
 
 
