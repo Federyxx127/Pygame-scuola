@@ -1,0 +1,18 @@
+def greet():                             # così verrà richiamata definita la funzione che chiederà un input e lo stamperà
+    name = input("what's your name?")
+    print("hello " + name)
+
+greet()
+
+
+
+
+
+
+def se():
+    a = int(input("e a number"))
+    b= int(input("r one"))
+    c= a+b
+    print(c)
+
+se()
