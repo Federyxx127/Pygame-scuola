@@ -9,7 +9,7 @@ screen.blit(soldier, (0,0)) # blit richiede cosa mostrare (soldier) e le cordina
 
 
 
-rect_2.topleft = (2oo, 200) #così si darà una poszione all'angolo in alto a sinistra del rettangolo (non del soldato, ma del rettangolo con le sue dimensioni), dando così una poszione al rettangolo tutto
+rect_2.topleft = (200, 200) #così si darà una poszione all'angolo in alto a sinistra del rettangolo (non del soldato, ma del rettangolo con le sue dimensioni), dando così una poszione al rettangolo tutto
 screen.blit(soldier, rect_2) #in questo modo il soldato sarà sempre all'interno del rettangolo
 #per muoverlo useremo il key input visto nelle altre repositories
 key = pygame.key.get_pressed()
@@ -24,6 +24,18 @@ if key[pygame.K_w]  == True:
   rect_2.y -= 5                #così si muoverà sull'asse delle y di 5 pixel
 
 #per non mostrare il rettangolo basterà non usare "pyagame.draw.rect"
+
+
+#per far seguire il cursore da un immagine bisogna per prima cosa impostare le coordinate dell'immagine
+
+screen.blit(soldier, (0,0)) #in questo caso 0,0 per poi prendere anche quelle del cursore
+pos = pygame.mouse.get_pos()  
+# si calcolano le coordinate polari rispetto al cannone facendo una sottrazione
+x_dist = pos[0] - x  #pos[0] perchè prende la coordinata 0, ovvero la prima delle coordinate del mouse prese nella linea di codice precedente
+y_dist = -(pos[1] - x) #pos[1] perchè prende la seconda coordinata del mouse, ovvero le y, e tutto negativo perchè le coordinate sono invertite
+
+angle = math.degrees(math.atan.2(y_dist, x_dist))  #bisogna importare la libreria math all'inizio del codice
+soldier = pygame.transform.rotate(soldier, angle)  #prendilo per buono se non sai la trigonometria
 
 
  
