@@ -1,0 +1,19 @@
+#si crea la classe, ovvero un insieme di variabili vuote comuni a tutti gli oggetti della classe
+
+class auto:
+  #attributi della classe
+  granzia = 1
+  assicurazione = 1
+  parcoAuto = 0
+
+  #per costruirire la funzione
+  def __init__(self, proprietario, marca, modello, cilindrata, cavalli, colore):   #per iniziare una classe bisogna "iniziallizzarla" quindi va usato init subito dopo averla creata, quindi inserisco le caratteristiche di quella classe
+    self.proprietario = proprietario
+    self.marca = marca
+    self.modello = modello                                       #self serve ad indicare che, per esempio, proprietario corrisponde alla caratteristica proprietario che sto inizializando
+    self.cilindrata = cilindrata
+    self.cavalli = cavalli
+    self.colore = colore
+    auto.parcoAuto +=1
+
+  giovanni = auto("giovanni, ford, fiesta, 500, 500, rossa)
