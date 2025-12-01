@@ -4,7 +4,7 @@ text_font = pygame.SysFont("Arial", 30) #si possono specificare caratteristiche 
 #dopodichè, al di fuori del ciclo definiamo il testo tramite una funzione 
 
 def draw_text(text, font, text_col, x, y) #definita il nome della funzione, si definisce ciò di cui ha bisogno
-  img = font.render(text, True, text_col) #non esistendo una funzione per far comparire un testo, ma solo un immagine, va creata la variabile (img) che è un immagine che ha al suo interno il testo stesso( che verrà esplicitato nel richiamo della funzione), la booleana True
+  img = font.render(text, True, text_col) #non esistendo una funzione per far comparire un testo, ma solo un immagine, va creata la variabile (img) che è un immagine avente al suo interno il testo stesso( che verrà esplicitato nel richiamo della funzione), la booleana True
   #( indica che il font da usare è quello definito prima) ed il colore del testo( anch'esso da dichiarare quando viene chiamata la verisone)
   screen.blit(img, (x, y)) #blit mostra l'immagine sullo schermo e ne dichiara le coordinate
 
