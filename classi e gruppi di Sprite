@@ -22,11 +22,11 @@ class auto():
 
 class Square(pygame.spirte.Sprite): #la classe square avrà tutte le caratteristiche dlla classe sprite
   def __init__(self, color, x, y)
-  pygame.sprite.Sprite.__init__(self)
-  self.image = pygame.Surface((50, 50))
-  self.image.fill(col)
-  self.rect = self.image.get_rect()
-  self.rect.center = (x, y)
+    pygame.sprite.Sprite.__init__(self)
+    self.image = pygame.Surface((50, 50))
+    self.image.fill(col)
+    self.rect = self.image.get_rect()
+    self.rect.center = (x, y)
 square = Square("crimson", 500, 300)
 print(square)
 
@@ -37,3 +37,40 @@ print(squares)
 
 #per gli sprite non c'è bisogno del metodo blit, ma basterà draw
 squares.draw(screen)
+
+
+#per far cadere gli sprite di x pixel al frame, che andrà impostato prima del ciclo di gioco, si dovrà usare il metodo move_ip usando come variabile l'update, intentato ugualmente al metodo init, quindi  
+  def update(self):
+    self.rect.move_ip(0,5)
+# così facendo però gli sprite continuano a cadere all'infinito, quando escono dallo schermo vanno "killati"
+  def update(self):
+    self.rect.move_ip(0,5)
+  if self.rect..top > SCREEN_HEIGHT:
+    self.kill()
+#possiamo fare in modo che se degli sprite collidendocon sprite di altre classi si auto killino inserendo questa funzione nella costruzione della classe
+pygame.sprite.spritecollide(sprite, group, dokill) #sprite è self e group il gruppo identificato dalla collisione
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
