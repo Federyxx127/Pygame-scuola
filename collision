@@ -1,3 +1,34 @@
-#dati 2 oggetti 
+#dati 1 oggetto e una lista
 rect_1 = pygame.Rect(0, 0, 25, 25)
-obstacle_rect = pygame.Rect(random.randint(0, 500), random.randint(0, 500), 25, 35)
+obastcles  = [] #lista vuota
+for i in range(16)
+  obstacle_rect = pygame.Rect(random.randint(0, 500), random.randint(0, 500), 25, 25)
+  obstacles.append(obstacle_rect)
+
+BG = (50, 50, 50)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+colori preimpostati
+
+#nel game loop 
+screen.fill(BG)
+color = GREEN #ogni volta che userò color verrà usata questa variabile, dopodichè si metterà un ciclo di if per controllare la collisione cambiare il colore in tale caso
+if rect_1.collilist(obstacles) >= o: #in questo modo se il rettangolo colliderà con un oggetto della lista obstacles diventerà rosso, maggiore uguale a zero per dare in output solo le collisioni invece che tutte le non collisioni (ottimizzazioni)
+    col = RED
+pos = pygame.mouse.get_pos()
+rect_1.center = pos
+
+pygame.draw.rect(screen, col, rect_1)
+for obstacle in obstacles:
+  pygame.draw.rect(screen, BLUE, obstacle)
+
+
+#questo vale per le collisioni tra oggetti, mentre per le collisioni tra mouse, non servirà ovviamente il rettangolo principale, ma si avrà il bisogno di mantenere la posizione del mouse e gli obstacle
+for obstacle in obstacles:
+  if obstacle.collidepoint(pos)
+    pygame.draw.rect(screen, RED, obstacle)
+  else:
+    pygame.draw.rect(screen, GREEN, obstacle) 
+#ha checkato se la posizione del mouse coincide con quella del mouse, nel caso il quadrato verràa disegnato rosse, sennò verrà disegnato verde, questo check avviene ad ogni frame
+
