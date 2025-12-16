@@ -35,6 +35,14 @@ pygame.draw.line(screen, (255, 0, 255), (300, 200), (450, 100))
 #per fare una linea che segue la posizione del mosue si deve impostare una variabile che sia la posizione finale, indicare come posizione finale quella stessa variabile:
 
 pos = pygame.mouse.get_pos()
+
+
+
+#per comodità all'inizio del codice si potrà creare un elenco di colori da cui poter attingere
+colors = ["red", "orange", "cyan", "black", "navy"]
+
+
+
 pygame.draw.line(screen, (255, 0, 255), (300, 200), pos)
 
 
