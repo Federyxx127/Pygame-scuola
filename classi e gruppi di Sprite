@@ -1,6 +1,6 @@
 #si crea la classe, ovvero un insieme di variabili vuote comuni a tutti gli oggetti della classe
 
-class auto:
+class auto():
   #attributi della classe
   granzia = 1
   assicurazione = 1
@@ -17,3 +17,20 @@ class auto:
     auto.parcoAuto +=1
 
   giovanni = auto("giovanni, ford, fiesta, 500, 500, rossa)
+
+#per i gruppi di sprite dovremmo specificare questo tipo di costruzione nella classe
+
+class Square(pygame.spirte.Sprite): #la classe square avrà tutte le caratteristiche dlla classe sprite
+  def __init__(self, color, x, y)
+  pygame.sprite.Sprite.__init__(self)
+  self.image = pygame.Surface((50, 50))
+  self.image.fill(col)
+  self.rect = self.image.get_rect()
+  self.rect.center = (x, y)
+square = Square("crimson", 500, 300)
+print(square)
+
+#per creare un gruppo di spirte
+squares = pygame.sprite.Group()
+squares.add(square)
+print(squares)
