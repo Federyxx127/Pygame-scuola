@@ -34,3 +34,6 @@ print(square)
 squares = pygame.sprite.Group()
 squares.add(square)
 print(squares)
+
+#per gli sprite non c'è bisogno del metodo blit, ma basterà draw
+squares.draw(screen)
